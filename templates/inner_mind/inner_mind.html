@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Listen to your inner mind for this 15 mins</h2>
+{% if time %}
+<h1>{{ time }}</h1>
+{% else %}
+<h1 id="countdown">{{ time }}</h1>
+{% endif %}
+{% if time %}
+<a href="/inner_mind" class="button primary small">Restart</a>
+{% endif %}
+<script>
+    const startingMinutes = 15;
+    let time = startingMinutes * 60;
+
+    const countdownEl = document.getElementById('countdown');
+
+    setInterval(updateCountdown, 1000);
+
+    function updateCountdown() {
+        const minutes = Math.floor(time / 60);
+        let seconds = time % 60;
+
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+
+        countdownEl.innerHTML = `${minutes}:${seconds}`;
+        time--;
+
+        if (time == 0) {
+            location.replace("http://127.0.0.1:8000/inner_mind/done");
+        }
+    }
+</script>
+{% endblock %}

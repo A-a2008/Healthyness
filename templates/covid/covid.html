@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>COVID Tracker</h1>
+<p>Search for the country and get the number of cases in that country</p>
+{% if plot %}
+{% autoescape off %}
+{{ plot | safe }}
+{% endautoescape %}
+{% endif %}
+<form action="/covid/" method="post">
+    {% csrf_token %}
+    <label for="country">Place</label>
+    <select id="country" name="country">
+        {% for country in countries %}
+        {% if country == country_selected %}
+        <option value="{{ country_selected }}" selected>{{ country_selected }}</option>
+        {% endif %}
+        <option value="{{ country }}">{{ country }}</option>
+        {% endfor %}
+    </select><br />
+    <input type="submit" class="button primary small" value="Search">
+</form>
+{% endblock %}

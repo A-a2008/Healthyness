@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Sugar Calculator</h1>
+<p>Enter the number of required items and get the amount of intake of sugar. Please only enter the ones which you have eaten.</p>
+
+{% if cubes %}
+<p>
+    You have consumed <b>{{ cubes }}</b> cubes of sugar <br />
+    {{ message }}<br />
+    Children aged 11 years or older should have a maximum of <b>7</b> cubes of sugar in a day from all their food and drink.<br />
+    <dl>
+        <dt>Data:</dt>
+        <dd>
+            Total amount of grams consumed: <b>{{ grams }}</b>
+        </dd>
+        <dd>
+            Total amount of calories consumed: <b>{{ calories }}</b>
+        </dd>
+    </dl>
+</p>
+{% endif %}
+
+<form action="/sugar/" method="post">
+    {% csrf_token %}
+    Sugary Cereal (30g): <input type="number" name="cereal" min="0" max="100" value="0"><br /><br />
+    Cola (330ml): <input type="number" name="cola" min="0" max="100" value="0"><br /><br />
+    Milkshake (400ml): <input type="number" name="milkshake" min="0" max="100" value="0"><br /><br />
+    Juice (200ml): <input type="number" name="juice" min="0" max="100" value="0"><br /><br />
+    Cake bar (1 bar): <input type="number" name="cake_bar" min="0" max="100" value="0"><br /><br />
+    Biscuit (1 biscuit): <input type="number" name="biscuit" min="0" max="100" value="0"><br /><br />
+    Sweets (1 pack): <input type="number" name="sweets" min="0" max="100" value="0"><br /><br />
+    Pudding (One pot): <input type="number" name="pudding" min="0" max="100" value="0"><br /><br />
+    Chocolate bar (1 bar): <input type="number" name="chocolate" min="0" max="100" value="0"><br /><br />
+    <input type="submit" class="primary button" value="Check">
+</form>
+{% endblock %}

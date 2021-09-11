@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h2>Listen to your inner mind for this 15 mins</h2>
+<h1>00:00</h1>
+<audio autoplay loop>
+    <source src="{% static 'timer/timer.mp3' %}" type="audio/mpeg" >
+</audio>
+<a href="/inner_mind/stop/" class="button small">Stop</a>
+{% endblock %}

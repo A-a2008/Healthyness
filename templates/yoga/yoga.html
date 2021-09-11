@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Yoga</h1>
+<p>Do these exercises daily and have a fit body</p>
+<p><b>Do these exercises on your own risk, consult a professional yoga teacher and do these exercises</b></p>
+<p>We prefer doing these exercises in the morning with the east rays falling on you</p>
+<p>
+    Today's top scorers: <br>
+    <ol>
+        {% for highest_point in highest_points %}
+        <li>{{ highest_point.user.first_name }}: <b>{{ highest_point.points }}</b></li>
+        {% endfor %}
+    </ol>
+</p>
+<h3>Yoga Poses:</h3>
+<h4>Mountain Pose</h4>
+<h5><i>Sanskrit</i>: Tadasana</h5>
+<img src="{% static 'images/yoga/mountain_pose.jpg' %}" class="image fit">
+<h5>How to do:</h5>
+<p>
+    Stand with your feet together or hip-width apart. Ground down through the four corners of your feet.
+    Roll your shoulders away from your ears, draw your shoulder blades down your back, and lift the crown of your head.
+    <br><br>
+    Engage your thighs, draw your belly button in, and lengthen up through the spine. Turn your palms facing the
+    front of the room. Relax your jaw and unfurrow your brow. Breathe easy.
+</p>
+<h4>Chair Pose</h4>
+<h5><i>Sanskrit</i>: Utkatasana</h5>
+<img src="{% static 'images/yoga/chair_pose.jpg' %}" class="image fit">
+<h5>How to do:</h5>
+<p>
+    Start in Mountain Pose. As you inhale, raise your arms, spread your fingers, and reach up through your fingertips.
+    As you exhale, sit back and down as if sitting into a chair.
+    <br><br>
+    Shift your weight toward the heels and lengthen up through the spine. As you inhale, lift and lengthen through your
+    arms. As you exhale, sit deeper into the pose.
+</p>
+<h4>Down dog on a chair</h4>
+<h5><i>Sanskrit</i>: Uttana shishosana</h5>
+<img src="{% static 'images/yoga/downward_dog.jpg' %}" class="image fit">
+<h5>How to do:</h5>
+<p>
+    Place your hands on the back of a chair with palms shoulder-distance apart. Step your feet back until they align
+    under hips, creating a right angle with your body, spine parallel with the floor.
+    <br><br>
+    Ground through your feet and lift through thighs. Reach hips away from hands to lengthen the sides of your torso.
+    Firm your outer arms in and lengthen through the crown of your head.
+</p>
+<h4>Downward facing dog</h4>
+<h5><i>Sanskrit</i>: Uttana shishosana</h5>
+<img src="{% static 'images/yoga/downward_facing_dog.jpg' %}" class="image fit">
+<h5>How to do:</h5>
+<p>
+    From all fours, walk your hands 6 inches in front of you. Tuck your toes and lift your hips up and back to lengthen
+    your spine. If your hamstrings are tight, keep your knees bent in order to bring your weight back into the legs.
+    <br><br>
+    Spread your fingers wide, press into your hands, and rotate your arms so that your biceps are facing toward one
+    another. Press your thighs back toward the wall behind you.
+</p>
+<h4>Triangle Pose</h4>
+<h5><i>Sanskrit</i>: Trikonasana</h5>
+<img src="{% static 'images/yoga/triangle_pose.jpg' %}" class="image fit">
+<h5>How to do:</h5>
+<p>
+    Stand with feet wide, 3–4 feet apart. Shift your right heel out so your toes are pointing slightly inward. Turn
+    your left foot out 90 degrees. Line up your left heel with the arch of your right foot.
+    <br><br>
+    Keeping both legs straight, ground through your feet. Lift arms into a T at shoulder height. Reach forward with your
+    front arm. When you can’t reach anymore, hinge at the front hip.
+    <br><br>
+    Bring your front arm down to your shin, a foam block, or the ground. Lift your back arm up toward the sky and spread
+    your fingers. Take your gaze down to the floor or up toward your lifted hand.
+</p>
+<h4>Tree Pose</h4>
+<h5><i>Sanskrit</i>: Vrksasana</h5>
+<img src="{% static 'images/yoga/tree_pose.jpg' %}" class="image fit">
+<h5>How to do:</h5>
+<p>
+    Start in Mountain Pose. Find a fixed point in front of you and stare at it to help you balance.
+    <br><br>
+    As you inhale, shift the weight into your left foot and lift your right foot an inch off the floor. Using your right
+    hand, bring the foot to your shin or inner thigh. Avoid placing your foot directly on the knee.
+    <br><br>
+    As you exhale, ground through the standing leg and lengthen through the crown of your head. Bring your palms to touch
+    in front of your sternum into prayer hands.
+    <br><br>
+    <b>Pro tip:</b> To play with your balance, lift your hands up toward the sky in a V-shape. Take your gaze up toward
+    the ceiling. If you’re an experienced practitioner, you can even try closing your eyes.
+</p>
+<h4>Bridge Pose</h4>
+<h5><i>Sanskrit</i>: Setu Bandha Sarvangasana</h5>
+<img src="{% static 'images/yoga/bridge_pose.jpg' %}" class="image fit">
+<h5>How to do:</h5>
+<p>
+    Lie faceup with knees bent, feet flat on the floor, and arms at your sides with palms facedown. Keep your feet
+    parallel and hip-width apart, heels stacked under knees.
+    <br><br>
+    On an inhale, activate through the legs and the glutes. Press the floor away with your feet and lift the hips off
+    the floor toward the sky.
+    <br><br>
+    If your shoulders are tight and you want more leverage, try holding the sides of your yoga mat and lifting your hips.
+    You may also wish to interlace your fingers underneath your “bridge” and shimmy your shoulders under the chest.
+    <br><br>
+    When you’re ready to come down, lift your heels up and slowly lower your hips back to the ground, one vertebra at a
+    time.
+    <br><br>
+    <b>Pro tip:</b> To keep your knees from bowing out to the side, place a block between the upper thighs. Squeeze it
+    tight as you lift into Bridge Pose.
+</p>
+<h4>Bound Ankle Pose</h4>
+<h5><i>Sanskrit</i>: Baddha Konasana</h5>
+<img src="{% static 'images/yoga/bound_ankle_pose.jpg' %}" class="image fit">
+<h5>How to do:</h5>
+<p>
+    Sitting on the floor, bend knees and open them out to the side like a book. Join the soles of your feet
+    together while sitting upright.
+    <br><br>
+    Place fingertips on the floor directly behind you and lengthen up through the spine. You can also hold onto your
+    ankles and hinge forward at the hips.
+    <br><br>
+    <b>Pro tip:</b> If you’re feeling stiff, sit on the edge of a blanket to help your forward fold.
+</p>
+<h4>Seated forward fold</h4>
+<h5><i>Sanskrit</i>: Paschimottanasana</h5>
+<img src="{% static 'images/yoga/seated_forward_fold.jpg' %}" class="image fit">
+<h5>How to do:</h5>
+<p>
+    Sit and straighten your legs out in front of you, grounding your thighs into the floor. Hinge at the hips to
+    elongate your torso over your thighs. Grab hold of the outer edges of your feet.
+    <br><br>
+    <b>Pro tip:</b> If your hamstrings are tight, grab a strap and loop it behind your feet. Use the leverage to bring
+    your torso closer to your thighs. You can also sit on the edge of a blanket to help you fold forward
+</p>
+<h4>Corpse Pose</h4>
+<h5><i>Sanskrit</i>: Savasana</h5>
+<img src="{% static 'images/yoga/corpse_pose.jpg' %}" class="image fit">
+<h5>How to do:</h5>
+<p>
+    Lie faceup, bringing your legs to the outer edges of your mat, like a starfish. Splay your feet out to the sides.
+    Place arms along sides, palms facing up. Close your eyes and relax.
+    <br><br>
+</p>
+<h3>
+    If you have done all of these, we appreciate it.
+    {% if not user.is_authenticated %}
+    Not many people do yoga to keep their body fit, but it is possible if you do it.
+    {% endif %}
+</h3>
+{% if user.is_authenticated %}
+<p>
+    Not many people do yoga, so we have a points system. Please select
+    the exercises you have done.
+</p>
+<form action="/yoga/" method="post">
+    {% csrf_token %}
+    <input type="checkbox" name="exercises" value="mountain" id="mountain">
+    <label for="mountain">Mountain Pose</label><br>
+    <input type="checkbox" name="exercises" value="chair" id="chair">
+    <label for="chair">Chair Pose</label><br>
+    <input type="checkbox" name="exercises" value="down_dog" id="down_dog">
+    <label for="down_dog">Down dog on a chair</label><br>
+    <input type="checkbox" name="exercises" value="downward_dog" id="downward_dog">
+    <label for="downward_dog">Downward facing dog</label><br>
+    <input type="checkbox" name="exercises" value="triangle" id="triangle">
+    <label for="triangle">Triangle Pose</label><br>
+    <input type="checkbox" name="exercises" value="tree" id="tree">
+    <label for="tree">Tree Pose</label><br>
+    <input type="checkbox" name="exercises" value="bridge" id="bridge">
+    <label for="bridge">Bridge Pose</label><br>
+    <input type="checkbox" name="exercises" value="bound_ankle" id="bound_ankle">
+    <label for="bound_ankle">Bound ankle Pose</label><br>
+    <input type="checkbox" name="exercises" value="seated_forward" id="seated_forward">
+    <label for="seated_forward">Seated forward fold</label><br>
+    <input type="checkbox" name="exercises" value="corpse" id="corpse">
+    <label for="corpse">Corpse Pose</label><br>
+    <input type="submit" class="button small primary" value="Submit">
+</form>
+{% endif %}
+{% endblock %}
